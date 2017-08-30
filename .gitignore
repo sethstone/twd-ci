@@ -1,12 +1,56 @@
-# unpacked plugin folders
-plugins/**/*
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
 
-# files directory where uploads go
-files
+# Folder config file
+Desktop.ini
 
-# DBMigrate plugin: generated SQL
-db/sql
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
 
-# AssetBundler plugin: generated bundles
-javascripts/bundles
-stylesheets/bundles
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# =========================
+# Operating System Files
+# =========================
+
+# OSX
+# =========================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Sublime Project and SFTP config
+sftp-*.json
+*.sublime-project
+*.sublime-workspace
+
+# VSCode
+\.vscode/
+
+## Project-specifc
+testbox/
+coldbox/
+\.CFConfig\.json
