@@ -31,4 +31,4 @@ deploy:
   skip_cleanup: true
   script: rsync -r --delete-after --quiet --exclude '.dpl' --exclude 'box.json' --exclude '.CFConfig.json.tmpl' --exclude 'deploy_rsa.enc' --exclude 'deploy.sh' --exclude '.git' --exclude '.gitattributes' --exclude '.gitignore' --exclude 'README.md' --exclude 'server.json' --exclude '.travis.yml'  $TRAVIS_BUILD_DIR/ root@twd.initzero.net:/var/www/html/
   on:
-    branch: develop
+    branch: master
