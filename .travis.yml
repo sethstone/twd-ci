@@ -2,7 +2,7 @@ dist: trusty
 sudo: false
 language: java
 jdk:
-  - oraclejdk8
+- oraclejdk8
 cache:
   directories:
   - $HOME/.CommandBox
@@ -11,11 +11,14 @@ notifications:
 addons:
   ssh_known_hosts: twd.initzero.net
 before_install:
-  - wget http://downloads.ortussolutions.com/ortussolutions/commandbox/3.8.0/commandbox-bin-3.8.0.zip -O /tmp/commandbox.zip
-  - unzip /tmp/commandbox.zip
+- openssl aes-256-cbc -K $encrypted_75f3180c243e_key -iv $encrypted_75f3180c243e_iv
+  -in deploy_rsa.enc -out deploy_rsa -d
+- wget http://downloads.ortussolutions.com/ortussolutions/commandbox/3.8.0/commandbox-bin-3.8.0.zip
+  -O /tmp/commandbox.zip
+- unzip /tmp/commandbox.zip
 install:
-  - ./box install
+- ./box install
 before_script:
-  - ./box server start port=8500
+- ./box server start port=8500
 script:
-  - ./box testbox run runner='http://127.0.0.1:8500/tests/runner.cfm'
+- ./box testbox run runner='http://127.0.0.1:8500/tests/runner.cfm'
