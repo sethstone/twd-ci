@@ -3,3 +3,16 @@ sudo: false
 language: java
 jdk:
   - oraclejdk8
+cache:
+  directories:
+  - $HOME/.CommandBox
+notifications:
+  email: false
+addons:
+  ssh_known_hosts: twd.initzero.net
+before_install:
+  - wget http://downloads.ortussolutions.com/ortussolutions/commandbox/3.8.0/commandbox-bin-3.8.0.zip -O /tmp/commandbox.zip
+  - unzip /tmp/commandbox.zip
+install:
+  - ./box install
+script: true
