@@ -2,7 +2,7 @@
 
 	// Default Action
 	function index(event,rc,prc){
-		prc.welcomeMessage = "Welcome to ColdBox!";
+		prc.welcomeMessage = "Welcome to TWD!";
 		event.setView("main/index");
 	}
 
